@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Узнать больше</title>
+    <link rel="stylesheet" href="lm.css">
+    <link rel="icon" type="image/png" href="foto/WhatsApp Image 2025-04-22 at 20.19.22.jpeg">
+</head>
+<body>
+    <header>
+        <a><img src="foto/WhatsApp Image 2025-04-22 at 20.19.22.jpeg" class="ava"></a>
+        <ul class="nav">
+            <li><a href="http://127.0.0.1:5500/estegrem.html">Домой</a></li>
+            <li><a href="http://127.0.0.1:5500/contact.html">Контакты</a></li>
+            <li><a href="price.html">Прайсы</a></li>
+            <li><a href="faq.html">Вопросы</a></li> 
+        </ul>
+    </header>
+
+    <div class="company-section">
+        <h2 class="fade-in"><span class="highlight">О компании «Лазер Азия»</span></h2>
+
+        <p class="fade-in"><span class="highlight">Компания «Лазер Азия»</span> уже более 6 лет занимается поставкой косметологического лазерного оборудования в салоны красоты и клиники по всему Казахстану и странам Средней Азии.</p>
+        <p class="fade-in">Широкий ассортимент аппаратов позволяет удовлетворить любые потребности покупателей — от бюджетных моделей до премиум-класса.</p>
+      
+        <h2 class="fade-in"><span class="highlight">Что мы предлагаем?</span></h2>
+      
+        <p class="fade-in">Сегодня мы предлагаем профессиональное оборудование китайского производства, отобранное специально под потребности вашего салона:</p>
+      
+        <ul>
+            <li class="fade-in">Микроигольчатый RF с вакуумным усилением</li>
+            <li class="fade-in">Дополнительная ручка для лечения акне</li>
+            <li class="fade-in">Охлаждающая ручка для уменьшения отека и покраснения</li>
+            <li class="fade-in">RF-манипула с моноиглами для точечной работы</li>
+            <li class="fade-in">Криоручка с охлаждением от +1°C до –5°C</li>
+        </ul>
+      
+        <h2 class="fade-in"><span class="highlight">Возможности и эффекты:</span></h2>
+      
+        <ul>
+            <li class="fade-in">Выравнивание рельефа кожи: поры, рубцы постакне, растяжки, дряблость</li>
+            <li class="fade-in">Лечение акне, сирингом, бородавок</li>
+            <li class="fade-in">Сокращение кожного лоскута</li>
+            <li class="fade-in">Выравнивание цвета кожи и устранение тусклости</li>
+            <li class="fade-in">Работа с деликатной зоной глаз, лица (32 иглы) и тела (64 иглы)</li>
+        </ul>
+      
+        <p class="fade-in"><span class="highlight">Это незаменимый инструмент</span> для каждого профессионального косметолога!</p>
+    </div>
+    
+    <div class="circle"></div>
+
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(el => {
+            appearOnScroll.observe(el);
+        });
+    </script>
+</body>
+</html>
